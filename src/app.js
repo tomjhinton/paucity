@@ -38,13 +38,28 @@ const s = (sk) => {
   }
 
   sk.draw = () =>{
-  sk.translate(0, 0, 0);
-  sk.push();
-  sk.rotateZ(sk.frameCount * 0.01);
-  sk.rotateX(sk.frameCount * 0.01);
-  sk.rotateY(sk.frameCount * 0.01);
-  sk.box(70, 70, 70);
-  sk.pop();
+    sk.background(220);
+    sk.translate(0, 0, 0)
+    sk.normalMaterial()
+    sk.push()
+    sk.rotateZ(sk.frameCount * 0.01)
+    sk.rotateX(sk.frameCount * 0.02)
+    sk.rotateY(sk.frameCount * 0.01)
+    sk.box(200)
+    sk.pop()
+    sk.rotateZ(sk.frameCount * 0.01)
+    sk.rotateX(sk.frameCount * 0.04)
+    sk.rotateY(sk.frameCount * 0.01)
+    sk.box(200)
+    sk.rotateZ(sk.frameCount * 0.01)
+    sk.rotateX(sk.frameCount * 0.08)
+    sk.rotateY(sk.frameCount * 0.01)
+    sk.box(200)
+    sk.rotateZ(sk.frameCount * 0.02)
+    sk.rotateX(sk.frameCount * 0.04)
+    sk.rotateY(sk.frameCount * 0.01)
+    sk.box(200)
+
 
 
   }
