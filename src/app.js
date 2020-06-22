@@ -39,8 +39,10 @@ const s = (sk) => {
 
   sk.draw = () =>{
     sk.background(220);
+    sk.ambientLight(50);
+    sk.pointLight(250, 250, 250, 100, 100, 30);
     sk.translate(0, 0, 0)
-    sk.normalMaterial()
+    sk.specularMaterial("#"+((1<<24)*Math.random()|0).toString(16));
     sk.push()
     sk.rotateZ(sk.frameCount * 0.01)
     sk.rotateX(sk.frameCount * 0.02)
@@ -59,7 +61,10 @@ const s = (sk) => {
     sk.rotateX(sk.frameCount * 0.04)
     sk.rotateY(sk.frameCount * 0.01)
     sk.box(200)
-
+    sk.rotateZ(sk.frameCount * 0.03)
+    sk.rotateX(sk.frameCount * 0.04)
+    sk.rotateY(sk.frameCount * 0.02)
+    sk.box(200)
 
 
   }
