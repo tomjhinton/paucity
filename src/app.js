@@ -43,29 +43,12 @@ const s = (sk) => {
     sk.pointLight(250, 250, 250, 100, 100, 30);
     sk.translate(0, 0, 0)
     sk.specularMaterial("#"+((1<<24)*Math.random()|0).toString(16));
-    sk.push()
-    sk.rotateZ(sk.frameCount * 0.01)
-    sk.rotateX(sk.frameCount * 0.02)
-    sk.rotateY(sk.frameCount * 0.01)
-    sk.box(200)
-    sk.pop()
-    sk.rotateZ(sk.frameCount * 0.01)
-    sk.rotateX(sk.frameCount * 0.04)
-    sk.rotateY(sk.frameCount * 0.01)
-    sk.box(200)
-    sk.rotateZ(sk.frameCount * 0.01)
-    sk.rotateX(sk.frameCount * 0.08)
-    sk.rotateY(sk.frameCount * 0.01)
-    sk.box(200)
-    sk.rotateZ(sk.frameCount * 0.02)
-    sk.rotateX(sk.frameCount * 0.04)
-    sk.rotateY(sk.frameCount * 0.01)
-    sk.box(200)
-    sk.rotateZ(sk.frameCount * 0.03)
-    sk.rotateX(sk.frameCount * 0.04)
-    sk.rotateY(sk.frameCount * 0.02)
-    sk.box(200)
-
+    for(let i =1;i<100 ; i++){
+      sk.rotateZ(sk.frameCount * (i/1000))
+      sk.rotateX(sk.frameCount * (i/1000))
+      sk.rotateY(sk.frameCount * (i/1000))
+      sk.box(200)
+    }
 
   }
 
